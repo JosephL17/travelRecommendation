@@ -9,7 +9,7 @@
 <body style="
   height: 100vh;
   margin: 0;
-  background-image: url('amalfi coast.jpg'); 
+  background-image: url('/pics/amalfi\ coast.jpg'); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -23,7 +23,7 @@
       <a href="about_us.html" style="color: white; margin: 0 10px;">About Us</a>
       <a href="contact_us.html" style="color: white; margin: 0 10px;">Contact Us</a>
       <input type="search" placeholder="Enter a destination or keyword" id="search" style="position: absolute; right: 45px; border-radius: 10px; color: teal; width: 250px"> 
-      <button style="position: absolute; right: 45px; border-radius: 10px; background-color: teal;">Search</button>
+      <button style="position: absolute; right: 45px; border-radius: 10px; background-color: teal;" onclick="handleSearch()">Search</button>
       <button style="position: absolute; right: 0px; border-radius: 10px; background-color: teal;" onclick="clearButton()">Clear</button>
     </nav>
     <div style="position: absolute; padding-left: 20%; padding-top: 25%;">
@@ -34,9 +34,20 @@
     <div style="position: absolute; bottom: 25%; width: 400px; left: 20%; color: white; font-size: large;">
         <p>Welcome to Travel Bloom – your trusted partner in unforgettable journeys. Whether you're chasing sun-soaked beaches, hidden gems, or cultural adventures, we're here to make every trip seamless and unforgettable. Explore the world with confidence — let your journey bloom with us.</p>
     </div>
-    <div id="location_display" style="display: flex; justify-content: flex-end; flex-wrap: wrap; padding-right: 10%; padding-top: 20%;">
-        Hello
-    </div>
+   <div id="location-display" style="
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 70vh; /* 70% of the viewport height */
+  width: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10%;
+  gap: 20px;
+">
+</div>
   </div>
 </body>
 </html>
